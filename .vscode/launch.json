@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Test Plugin",
+      "request": "launch",
+      "mainClass": "com.soda3x.SystemClockPluginTest",
+      "vmArgs": "-ea",
+      "projectName": "runelite-system-clock"
+    }
+  ]
+}
