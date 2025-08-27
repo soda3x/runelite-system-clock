@@ -18,16 +18,6 @@ public interface SystemClockConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "overlayPosition",
-		name = "Position",
-		description = "The screen position of the clock overlay.",
-		position = 2
-    )
-    default OverlayPosition overlayPosition() {
-			return OverlayPosition.TOP_RIGHT;
-    }
-
-	@ConfigItem(
 		keyName = "showTitle",
 		name = "Show Title",
 		description = "Toggle the display of the 'System Time' title.",

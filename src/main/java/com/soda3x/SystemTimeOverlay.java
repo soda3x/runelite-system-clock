@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import javax.inject.Inject;
 import net.runelite.client.ui.overlay.OverlayPanel;
+import net.runelite.client.ui.overlay.OverlayPosition;
 import net.runelite.client.ui.overlay.components.LineComponent;
 import net.runelite.client.ui.overlay.components.TitleComponent;
 
@@ -16,12 +17,11 @@ public class SystemTimeOverlay extends OverlayPanel {
   @Inject
   private SystemTimeOverlay(SystemClockConfig config) {
     m_config = config;
-    setPosition(m_config.overlayPosition());
+    setPosition(OverlayPosition.ABOVE_CHATBOX_RIGHT);
   }
 
   @Override
   public Dimension render(Graphics2D graphics) {
-    setPosition(m_config.overlayPosition());
 
     TimeFormat selectedFormat = m_config.format();
     String pattern = selectedFormat.getFormatString();
